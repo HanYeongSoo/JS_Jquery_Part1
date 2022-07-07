@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문-4</title>
+  </head>
+  <body>
+    <script>
+      // 사용자로부터 입력받는 부분
+      var value = window.prompt("행운의 번호를 입력하세요.");
+
+      // 값 비교
+      // CPU의 참조를 가정 적게 받으려고 하려면 if-else가 좋음
+      if (value == "1") {
+        document.write("당첨! 삼송 컴퓨터!");
+      } else if (value == "2") {
+        document.write("당첨! 선풍기!!");
+      } else if (value == "3") {
+        document.write("당첨! 에어컨!!");
+      } else {
+        document.write("꽝!");
+      }
+    </script>
+  </body>
+</html>
