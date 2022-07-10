@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN 방식 -> 인터넷이 연결이 되어 있는 장소에서만 사용 가능 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/text.css" />
+    <title>지구본, 텍스트 흔들기</title>
+  </head>
+  <body>
+    <div class="hello">
+      <div class="text">안녕하세요.</div>
+    </div>
+
+    <script>
+      function hello() {
+        var rnd1 = Math.floor(Math.random() * 20);
+        var rnd2 = Math.floor(Math.random() * 40);
+        var rnd3 = Math.floor(Math.random() * 3) + 100;
+
+        // 글자 흔들기
+        $(".hello").css({
+          botton: rnd1,
+          left: rnd2,
+        });
+        // 배경 확대
+        $(".hello .text").css({
+          "background-size": rnd3 + "%",
+        });
+      }
+
+      setInterval(hello, 100);
+    </script>
+  </body>
+</html>
