@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN 방식 -> 인터넷이 연결이 되어 있는 장소에서만 사용 가능 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/son.css" />
+    <title>지구본 움직이기</title>
+  </head>
+  <body>
+    <div id="panel">
+      <div id="bar">
+        <img src="images/son.png" id="son" />
+      </div>
+    </div>
+    <div id="btn">
+      <button id="btnStart">쏘니 움직이기</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // 쏘니 이미지 웹 요소(노드)를 찾아서 저장
+        var son = $("#son");
+        // 버튼에 이벤트 등록
+        $("#btnStart").click(function () {
+          son.animate(
+            {
+              left: "480px",
+            },
+            5000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
