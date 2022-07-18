@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
-</html>
+  <body>
+    <script>
+      // 1. 완전 반복...
+      // document.write("1. 홍길동 <br/>");
+      // document.write("1. 홍길동 <br/>");
+      // document.write("1. 홍길동 <br/>");
+      // document.write("1. 홍길동 <br/>");
+      // document.write("1. 홍길동 <br/>");
 
-내일부턴 얄짤없이 무조건 힘들어도 공부
+      // 2. for문 이용
+      // for (var i = 1; i <= 5; i++) {
+      //   document.write(i + ". 홍길동 <br/>");
+      // }
+
+      // 3. 함수 (코드의 재활용이 아주 좋음...)
+      function callName(name, count) {
+        for (var i = 1; i <= count; i++) {
+          document.write(i + ". " + name + "<br/>");
+        }
+      }
+      // 매개변수를 달리 주면 결과가 달라진다.
+      callName("홍길동", 10);
+      callName("한영수", 3);
+    </script>
+  </body>
+</html>
